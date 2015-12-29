@@ -6,7 +6,6 @@ var botID = process.env.BOT_ID;
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
       botRegex = /^\/cool guy$/;
-
   var name = "betabot";
 
   if(request.text && botRegex.test(request.text)) {
@@ -24,7 +23,7 @@ function respond() {
   }
 }
 
-function postBetaMessages(messageNumber) {
+function postBetaMessage(messageNumber) {
 	var botResponse, options, body, botReq;
 
 	botResponse = "Null";
